@@ -216,7 +216,6 @@
             <option value="en">English</option>
             <option value="zh-Hans">简体中文</option>
         </select>
-        <p id="demo"></p>
         <script>
             var gLang ;
             function setLang(){
@@ -230,13 +229,14 @@
               }else{
                 gLang = 'en';
               }
-
+              //<p id="demo"></p>
               document.getElementById("lang-select").value = gLang;
-              document.getElementById("demo").innerHTML = "Now the lang: "+ p + "-->" + gLang;
+              //document.getElementById("demo").innerHTML = "Now the lang: "+ p + "-->" + gLang;
             }
             setLang();
             function changeLang() {
                  var lang = document.getElementById("lang-select").value;
+
                  var href = window.location.href;
                  if((gLang != lang) && (lang == "zh-Hans")) {
                       var host = window.location.host;
@@ -252,7 +252,7 @@
                      window.location.replace(p);
                     //document.getElementById("demo").innerHTML = "Jump to: " + p + " Lang: " + gLang;
                }
-                //gLang = lang;
+                  //gLang = lang;
                 //document.getElementById("demo").innerHTML = "Jump to: " + href + " Lang: " + gLang;
 			       }
         </script>
@@ -365,6 +365,34 @@
 
       <h1 class="post-title">
         
+            <a class="post-title-link" href="/2016/09/09/2016-09-09-add-multi-language-select-under-hexo-next-theme/" itemprop="url">
+              
+                <span itemprop="name">Add Multi-Language select under Hexo NexT theme.</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-09-09T17:15:00+08:00"
+              content="2016-09-09" >
+          09-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
             <a class="post-title-link" href="/2016/09/02/hello-world/" itemprop="url">
               
                 <span itemprop="name">Hello, My First Post!</span>
@@ -436,7 +464,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -445,7 +473,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

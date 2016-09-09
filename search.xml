@@ -4,14 +4,39 @@
   
     
     <entry>
-      <title><![CDATA[想不想更开心？]]></title>
-      <url>http://yoursite.com/2016/09/02/LetMeHappier/</url>
+      <title><![CDATA[Add Multi-Language select under Hexo NexT theme.]]></title>
+      <url>http://yoursite.com/2016/09/09/2016-09-09-add-multi-language-select-under-hexo-next-theme/</url>
       <content type="html"><![CDATA[<hr>
-<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
-<p>别犹豫了，按下面那个红色的按钮！</p>
-<p>对，考验你的时候到了，尽情的打赏吧！！</p>
-<p>啊哈哈哈哈哈！</p>
-]]></content>
+<h2 id="Add-Multi-Language-select-under-Hexo-NexT-theme"><a href="#Add-Multi-Language-select-under-Hexo-NexT-theme" class="headerlink" title="Add Multi-Language select under Hexo NexT theme"></a>Add Multi-Language select under Hexo NexT theme</h2><hr>
+<p>Welcome to <a href="http://elizachen.cc/" target="_blank" rel="external">My Blog</a> !</p>
+<p>I want to write blog in both English and Chinese. Then more developers  can access them. So I add one selection box on header.</p>
+<p>Following are the steps:</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>*Install hexo-generator-i18n module.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-i18n --save</div></pre></td></tr></table></figure></p>
+<h3 id="Config-the-module"><a href="#Config-the-module" class="headerlink" title="Config the module."></a>Config the module.</h3><ul>
+<li><p>_config.yml</p>
+<ul>
+<li><p>Modify the themes/next/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">language: [en, zh-Hans]</div></pre></td></tr></table></figure>
+</li>
+<li><p>config hexo-generator-i18n option (optional, this is default option)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># config hexo-generator-i18n option (optional, this is default option)</div><div class="line">i18n:</div><div class="line">  type: [page, post]</div><div class="line">  generator: [index, archive, category, tag]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Replace-the-url-for-to-url-for-lang-to-output-link-under-current-language"><a href="#Replace-the-url-for-to-url-for-lang-to-output-link-under-current-language" class="headerlink" title="Replace the url_for() to url_for_lang() to output link under current language."></a>Replace the url_for() to url_for_lang() to output link under current language.</h3><ul>
+<li>Most the url_for() functions under /themes/next/_macro/</li>
+<li>*Note: If the sources(such avatar.png) are under the same folder, you will still use the url_for().<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;img class=&quot;site-author-image&quot; itemprop=&quot;image&quot;</div><div class="line">     src=&quot;&#123;&#123; url_for( theme.avatar | default(theme.images + &apos;/avatar.gif&apos;) ) &#125;&#125;&quot;</div><div class="line">     alt=&quot;&#123;&#123; theme.author &#125;&#125;&quot; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Add-the-javascript-codes-for-select"><a href="#Add-the-javascript-codes-for-select" class="headerlink" title="Add the javascript codes for select:"></a>Add the javascript codes for select:</h3><ul>
+<li>Maybe we can use switch_lang(lang) directly , but I failed, I will try it later. TBD.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;select id=&quot;lang-select&quot; onchange=&quot;changeLang()&quot;&gt;</div><div class="line">         &lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;</div><div class="line">         &lt;option value=&quot;zh-Hans&quot;&gt;简体中文&lt;/option&gt;</div><div class="line">     &lt;/select&gt;</div><div class="line">     &lt;script&gt;</div><div class="line">         function changeLang() &#123;</div><div class="line">              var lang = document.getElementById(&quot;lang-select&quot;).value;</div><div class="line">              var href = window.location.href;</div><div class="line">              if((gLang != lang) &amp;&amp; (lang == &quot;zh-Hans&quot;)) &#123;</div><div class="line">                   var host = window.location.host;</div><div class="line">                   var path = window.location.path;</div><div class="line">                   var p = href.replace(host,host+&apos;/&apos;+lang);</div><div class="line">                   window.location.replace(p);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">             if((gLang != lang) &amp;&amp; (lang == &quot;en&quot;)) &#123;</div><div class="line">                  var host = window.location.host;</div><div class="line">                  var path = window.location.path;</div><div class="line">                  var p = href.replace(&apos;/&apos; + gLang,&apos;&apos;);</div><div class="line">                  window.location.replace(p);</div><div class="line">                 //document.getElementById(&quot;demo&quot;).innerHTML = &quot;Jump to: &quot; + p + &quot; Lang: &quot; + gLang;</div><div class="line">            &#125;</div><div class="line">         &#125;</div><div class="line">     &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Bug"><a href="#Bug" class="headerlink" title="Bug:"></a>Bug:</h3><ul>
+<li>Sometimes there is no index.html under /public/zh-Hans folder. I will check it later. TBD.</li>
+</ul>
+<h3 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading."></a>Thanks for reading.</h3><h6 id="My-Blog-Motto-is-I-just-write-the-articles-which-are-useful"><a href="#My-Blog-Motto-is-I-just-write-the-articles-which-are-useful" class="headerlink" title="My Blog Motto is I just write the articles which are useful! ^_^ "></a>My Blog Motto is <strong><em>I just write the articles which are useful! ^_^ </em></strong></h6>]]></content>
     </entry>
     
     <entry>
