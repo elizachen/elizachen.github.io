@@ -239,7 +239,6 @@
             setLang();
             function changeLang() {
                  var lang = document.getElementById("lang-select").value;
-
                  var href = window.location.href;
                  if((gLang != lang) && (lang == "zh-Hans")) {
                       var host = window.location.host;
@@ -255,7 +254,7 @@
                      window.location.replace(p);
                     //document.getElementById("demo").innerHTML = "Jump to: " + p + " Lang: " + gLang;
                }
-                  //gLang = lang;
+                //gLang = lang;
                 //document.getElementById("demo").innerHTML = "Jump to: " + href + " Lang: " + gLang;
 			       }
         </script>
@@ -512,12 +511,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/02/LetMeHappier/" rel="next" title="想不想更开心？">
+                <i class="fa fa-chevron-left"></i> 想不想更开心？
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/09/2016-09-09-add-multi-language-select-under-hexo-next-theme/" rel="prev" title="Add Multi-Language select under Hexo NexT theme.">
-                Add Multi-Language select under Hexo NexT theme. <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/09/hexo/multi-language-selection/" rel="prev" title="Add Multi-Language select under NexT theme">
+                Add Multi-Language select under NexT theme <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -616,7 +619,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -624,7 +627,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -633,7 +636,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

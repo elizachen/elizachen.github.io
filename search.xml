@@ -4,8 +4,62 @@
   
     
     <entry>
-      <title><![CDATA[Add Multi-Language select under Hexo NexT theme.]]></title>
-      <url>http://yoursite.com/2016/09/09/2016-09-09-add-multi-language-select-under-hexo-next-theme/</url>
+      <title><![CDATA[Add sitemap]]></title>
+      <url>http://yoursite.com/2016/09/12/hexo/add-sitemap/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="Add-SiteMap"><a href="#Add-SiteMap" class="headerlink" title="Add SiteMap"></a>Add SiteMap</h2><hr>
+<p>Welcome to <a href="http://elizachen.cc/" target="_blank" rel="external">My Blog</a> !</p>
+<p>Following are the steps:</p>
+<h4 id="Install-plugin"><a href="#Install-plugin" class="headerlink" title="Install plugin"></a>Install plugin</h4><ul>
+<li><p>Install hexo-generator-sitemap.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-sitemap</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Config-the-module"><a href="#Config-the-module" class="headerlink" title="Config the module."></a>Config the module.</h4><ul>
+<li><p>_config.yml</p>
+<p> Add following:</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#plugins</div><div class="line"> plugins:</div><div class="line">  - hexo-generator-sitemap</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Deploy-yours-codes"><a href="#Deploy-yours-codes" class="headerlink" title="Deploy yours codes."></a>Deploy yours codes.</h4><ul>
+<li><p>Then You can find your sitemap.xml under your blog. Such as <a href="http://elizachen.cc/sitemap.xml" target="_blank" rel="external">http://elizachen.cc/sitemap.xml</a>.  </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+<h4 id="Commit-to-google-webmaster"><a href="#Commit-to-google-webmaster" class="headerlink" title="Commit to google webmaster."></a>Commit to google webmaster.</h4><ul>
+<li>Press your site.<br><img src="/images/hexo_sitemap_1.png" alt="google webmaster 1"></li>
+</ul>
+<ul>
+<li><p>Press sitemap block.</p>
+<p><img src="/images/hexo_sitemap_2.png" alt="google webmaster 2"></p>
+</li>
+</ul>
+<ul>
+<li>Add your sitemap:<br><img src="/images/hexo_sitemap_3.png" alt="google webmaster 3"></li>
+</ul>
+<h4 id="Waiting-for-google-finish-verify"><a href="#Waiting-for-google-finish-verify" class="headerlink" title="Waiting for google finish verify."></a>Waiting for google finish verify.</h4><p>Thanks for reading.</p>
+<p>My Blog Motto is <strong><em>I just write the articles which are useful! ^_^ </em></strong></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[No index.hml for zh-Hans]]></title>
+      <url>http://yoursite.com/2016/09/11/test/hexo/no-indext-for-zh/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="Sometimes-no-index-html-file-generated-under-public-zh-Hans-folder"><a href="#Sometimes-no-index-html-file-generated-under-public-zh-Hans-folder" class="headerlink" title="Sometimes no index.html file generated under public/zh-Hans folder"></a>Sometimes no index.html file generated under public/zh-Hans folder</h2><hr>
+<p>Welcome to <a href="http://elizachen.cc/" target="_blank" rel="external">My Blog</a> !</p>
+<p>Sometimes there is no index.html file generated under public/zh-Hans folder.</p>
+<p>But if I new one post file, the index.html file will be generated again.</p>
+<p>I don’t know it’s a Hexo bug or the nexT theme bug.</p>
+<p>Keeping track on it.</p>
+<p>Thanks for reading.</p>
+<p>My Blog Motto is <strong><em>I just write the articles which are useful! ^_^ </em></strong></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Add Multi-Language select under NexT theme]]></title>
+      <url>http://yoursite.com/2016/09/09/hexo/multi-language-selection/</url>
       <content type="html"><![CDATA[<hr>
 <h2 id="Add-Multi-Language-select-under-Hexo-NexT-theme"><a href="#Add-Multi-Language-select-under-Hexo-NexT-theme" class="headerlink" title="Add Multi-Language select under Hexo NexT theme"></a>Add Multi-Language select under Hexo NexT theme</h2><hr>
 <p>Welcome to <a href="http://elizachen.cc/" target="_blank" rel="external">My Blog</a> !</p>
@@ -36,7 +90,9 @@
 <h3 id="Bug"><a href="#Bug" class="headerlink" title="Bug:"></a>Bug:</h3><ul>
 <li>Sometimes there is no index.html under /public/zh-Hans folder. I will check it later. TBD.</li>
 </ul>
-<h3 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading."></a>Thanks for reading.</h3><h6 id="My-Blog-Motto-is-I-just-write-the-articles-which-are-useful"><a href="#My-Blog-Motto-is-I-just-write-the-articles-which-are-useful" class="headerlink" title="My Blog Motto is I just write the articles which are useful! ^_^ "></a>My Blog Motto is <strong><em>I just write the articles which are useful! ^_^ </em></strong></h6>]]></content>
+<p>Thanks for reading.</p>
+<p>My Blog Motto is <strong><em>I just write the articles which are useful! ^_^ </em></strong></p>
+]]></content>
     </entry>
     
     <entry>
@@ -54,6 +110,17 @@
 </ul>
 <p>Wish I just write the articles which are useful! ^_^</p>
 <p><img src="/images/FirstPost.png" alt="FirstPost"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[想不想更开心？]]></title>
+      <url>http://yoursite.com/2016/09/02/LetMeHappier/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
+<p>别犹豫了，按下面那个红色的按钮！</p>
+<p>对，考验你的时候到了，尽情的打赏吧！！</p>
+<p>啊哈哈哈哈哈！</p>
 ]]></content>
     </entry>
     
