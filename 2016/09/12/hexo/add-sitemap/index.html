@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://yoursite.com/images/hexo_sitemap_1.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo_sitemap_2.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo_sitemap_3.png">
-<meta property="og:updated_time" content="2016-09-12T08:37:01.000Z">
+<meta property="og:updated_time" content="2016-09-12T09:46:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add sitemap">
 <meta name="twitter:description" content="Add sitemap step by step.">
@@ -460,8 +460,10 @@
 </ul>
 <h4 id="Config-the-module"><a href="#Config-the-module" class="headerlink" title="Config the module."></a>Config the module.</h4><ul>
 <li><p>_config.yml</p>
-<p> Add following:</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#plugins</div><div class="line"> plugins:</div><div class="line">  - hexo-generator-sitemap</div></pre></td></tr></table></figure>
+<p> #####Please don’t use following sentence, it will remove other plugins and most pages will be removed:</p>
+<p>  <del>plugins:</del> <del>- hexo-generator-sitemap</del></p>
+<p> <strong>DO NOT define plugins! Let Hexo search for them (recommend) or define ALL the plugins you used.</strong><br> Please refer <a href="https://github.com/hexojs/hexo/issues/1848" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/1848</a> for more information.<br> Please use following:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">  path: sitemap.xml</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Deploy-yours-codes"><a href="#Deploy-yours-codes" class="headerlink" title="Deploy yours codes."></a>Deploy yours codes.</h4><ul>

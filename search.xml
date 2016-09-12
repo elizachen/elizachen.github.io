@@ -17,8 +17,10 @@
 </ul>
 <h4 id="Config-the-module"><a href="#Config-the-module" class="headerlink" title="Config the module."></a>Config the module.</h4><ul>
 <li><p>_config.yml</p>
-<p> Add following:</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#plugins</div><div class="line"> plugins:</div><div class="line">  - hexo-generator-sitemap</div></pre></td></tr></table></figure>
+<p> #####Please don’t use following sentence, it will remove other plugins and most pages will be removed:</p>
+<p>  <del>plugins:</del> <del>- hexo-generator-sitemap</del></p>
+<p> <strong>DO NOT define plugins! Let Hexo search for them (recommend) or define ALL the plugins you used.</strong><br> Please refer <a href="https://github.com/hexojs/hexo/issues/1848" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/1848</a> for more information.<br> Please use following:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sitemap:</div><div class="line">  path: sitemap.xml</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Deploy-yours-codes"><a href="#Deploy-yours-codes" class="headerlink" title="Deploy yours codes."></a>Deploy yours codes.</h4><ul>
@@ -104,6 +106,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[想不想更开心？]]></title>
+      <url>http://yoursite.com/2016/09/02/LetMeHappier/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
+<p>别犹豫了，按下面那个红色的按钮！</p>
+<p>对，考验你的时候到了，尽情的打赏吧！！</p>
+<p>啊哈哈哈哈哈！</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello, My First Post!]]></title>
       <url>http://yoursite.com/2016/09/02/hello-world/</url>
       <content type="html"><![CDATA[<hr>
@@ -118,17 +131,6 @@
 </ul>
 <p>Wish I just write the articles which are useful! ^_^</p>
 <p><img src="/images/FirstPost.png" alt="FirstPost"></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[想不想更开心？]]></title>
-      <url>http://yoursite.com/2016/09/02/LetMeHappier/</url>
-      <content type="html"><![CDATA[<hr>
-<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
-<p>别犹豫了，按下面那个红色的按钮！</p>
-<p>对，考验你的时候到了，尽情的打赏吧！！</p>
-<p>啊哈哈哈哈哈！</p>
 ]]></content>
     </entry>
     

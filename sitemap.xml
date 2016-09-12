@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/09/12/hexo/add-sitemap/</loc>
+    
+    <lastmod>2016-09-12T09:46:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/09/10/test/hexo/cannon-fodder/</loc>
     
     <lastmod>2016-09-12T08:53:47.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2016/09/11/test/hexo/no-indext-for-zh/</loc>
     
     <lastmod>2016-09-12T08:37:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/12/hexo/add-sitemap/</loc>
-    
-    <lastmod>2016-09-12T08:37:01.000Z</lastmod>
     
   </url>
   
