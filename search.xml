@@ -58,6 +58,14 @@
     </entry>
     
     <entry>
+      <title><![CDATA[cannon fodder]]></title>
+      <url>http://yoursite.com/2016/09/10/test/hexo/cannon-fodder/</url>
+      <content type="html"><![CDATA[<h2 id="The-Cannon-fodder-test-file"><a href="#The-Cannon-fodder-test-file" class="headerlink" title="The Cannon fodder test file."></a>The Cannon fodder test file.</h2><hr>
+<p>Welcome to <a href="http://elizachen.cc/2016/09/11/test/hexo/no-indext-for-zh/" target="_blank" rel="external">The detailed bug description</a> !</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Add Multi-Language select under NexT theme]]></title>
       <url>http://yoursite.com/2016/09/09/hexo/multi-language-selection/</url>
       <content type="html"><![CDATA[<hr>
