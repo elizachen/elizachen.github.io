@@ -180,7 +180,7 @@ th {
   padding: 0;
 }
 ::selection {
-  background: #262a30;
+  background: #222;
   color: #fff;
 }
 body {
@@ -891,8 +891,8 @@ pre .javascript .function {
   position: relative;
   display: inline-block;
   padding: 0 40px;
-  color: #fff;
-  background: #222;
+  color: #4285f4;
+  background: #4285f4;
   border-bottom: none;
 }
 .brand:hover {
@@ -1664,7 +1664,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cc9195;
+  background: #fff622;
 }
 .links-of-blogroll {
   font-size: 13px;
