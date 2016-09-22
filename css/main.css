@@ -728,7 +728,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #fff;
   background: #222;
-  border: 2px solid #555;
+  border: 2px solid #4285f4;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -740,7 +740,7 @@ pre .javascript .function {
 .post-more-link .btn:hover {
   border-color: #222;
   color: #fff;
-  background: #222;
+  background: #4285f4;
 }
 .btn-bar {
   display: block;
@@ -876,11 +876,12 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #4285f4;
 }
 .site-meta {
   margin: 0;
   text-align: center;
+  background: #4285f4;
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -891,8 +892,8 @@ pre .javascript .function {
   position: relative;
   display: inline-block;
   padding: 0 40px;
-  color: #4285f4;
-  background: #4285f4;
+  color: #fff;
+  background: #222;
   border-bottom: none;
 }
 .brand:hover {
@@ -1664,7 +1665,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff622;
+  background: #61edff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2411,7 +2412,7 @@ body {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: #4285f4;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {

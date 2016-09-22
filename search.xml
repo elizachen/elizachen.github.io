@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title><![CDATA[Change the background color of band]]></title>
+      <url>http://elizachen.cc/2016/09/22/hexo/change-band-bg-color/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="Change-the-background-color-of-band"><a href="#Change-the-background-color-of-band" class="headerlink" title="Change the background color of band"></a>Change the background color of band</h2><hr>
+<h3 id="The-Story"><a href="#The-Story" class="headerlink" title="The Story"></a>The Story</h3><p>I want to change the my blog band’s color.<br>I find many place and change its color, but I failed.<br>Today I find it:<br>It’s here: <strong>_themes/next/source/css/_schemes/Pisces/<em>brand.styl</em></strong></p>
+<p>`.site-meta {<br>  padding: 20px 0;<br>  color: white;<br>  background: $blue-google;</p>
+<p>  +tablet() {<br>    box-shadow: 0 0 16px rgba(0,0,0,0.5);<br>  }<br>  +mobile() {<br>    box-shadow: 0 0 16px rgba(0,0,0,0.5);<br>  }<br>}</p>
+<p>.brand {<br>  display: block;<br>  padding: 0;<br>  background: none;</p>
+<p>  &amp;:hover { color: white; }<br>}`<br>Now I change the background color to google’s blue. Isn’t it beautiful?</p>
+<h3 id="How-to-find-the-style-element-quickly"><a href="#How-to-find-the-style-element-quickly" class="headerlink" title="How to find the style element quickly?"></a>How to find the style element quickly?</h3><ul>
+<li>Use Web Inspector, change the element directly, to see if it’s OK</li>
+<li>Find the class name in your project</li>
+<li>Change one by one, usually in the custom theme files.</li>
+<li>Find the one.</li>
+</ul>
+<p>OK, bug is just a bug.<br>We can always fix it today or tommorrow.</p>
+<p>Welcome to <a href="http://elizachen.cc/">My Blog</a> !</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[认真也分三六九等，你是第几等？]]></title>
       <url>http://elizachen.cc/2016/09/21/diary/How-serious-are-you/</url>
       <content type="html"><![CDATA[<h2 id="认真也分三六九等，你是第几等？"><a href="#认真也分三六九等，你是第几等？" class="headerlink" title="认真也分三六九等，你是第几等？"></a>认真也分三六九等，你是第几等？</h2><p><img src="/images/serious.png" alt="Serious"></p>
@@ -273,14 +294,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[cannon fodder]]></title>
-      <url>http://elizachen.cc/2016/09/10/test/hexo/cannon-fodder-page/</url>
-      <content type="html"><![CDATA[<h2 id="The-Cannon-fodder-test-file"><a href="#The-Cannon-fodder-test-file" class="headerlink" title="The Cannon fodder test file."></a>The Cannon fodder test file.</h2><hr>
-<p>Welcome to <a href="http://elizachen.cc/2016/09/11/test/hexo/no-indext-for-zh/">The detailed bug description</a> !</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Add Multi-Language select under NexT theme]]></title>
       <url>http://elizachen.cc/2016/09/09/hexo/multi-language-selection/</url>
       <content type="html"><![CDATA[<hr>
@@ -319,6 +332,17 @@
     </entry>
     
     <entry>
+      <title><![CDATA[想不想更开心？]]></title>
+      <url>http://elizachen.cc/2016/09/02/LetMeHappier/</url>
+      <content type="html"><![CDATA[<hr>
+<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
+<p>别犹豫了，按下面那个红色的按钮！</p>
+<p>对，考验你的时候到了，尽情的打赏吧！！</p>
+<p>啊哈哈哈哈哈！</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello, My First Post!]]></title>
       <url>http://elizachen.cc/2016/09/02/hello-world/</url>
       <content type="html"><![CDATA[<hr>
@@ -333,17 +357,6 @@
 </ul>
 <p>Wish I just write the articles which are useful! ^_^</p>
 <p><img src="/images/FirstPost.png" alt="FirstPost"></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[想不想更开心？]]></title>
-      <url>http://elizachen.cc/2016/09/02/LetMeHappier/</url>
-      <content type="html"><![CDATA[<hr>
-<h2 id="考验你的时候到了-到-了！"><a href="#考验你的时候到了-到-了！" class="headerlink" title="考验你的时候到了~ 到~~了！"></a>考验你的时候到了~ 到~~了！</h2><hr>
-<p>别犹豫了，按下面那个红色的按钮！</p>
-<p>对，考验你的时候到了，尽情的打赏吧！！</p>
-<p>啊哈哈哈哈哈！</p>
 ]]></content>
     </entry>
     
