@@ -1,0 +1,1164 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="z9B6tlppCcJlE6m2PW6neW5rsKACjbF7A_MRtEgu05A" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Meta Learning,JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="感谢XDite的元学习课程,她让我8小时搞定了《JavaScript DOM 编程艺术》。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="元学习课心得和实践——八小时搞定《JavaScript DOM》">
+<meta property="og:url" content="http://elizachen.cc/2016/11/12/javascript/Meta_learning_Experience_practice/index.html">
+<meta property="og:site_name" content="elizaChen's Blog">
+<meta property="og:description" content="感谢XDite的元学习课程,她让我8小时搞定了《JavaScript DOM 编程艺术》。">
+<meta property="og:image" content="http://elizachen.cc/images/Programmer_woman.jpg">
+<meta property="og:image" content="http://elizachen.cc/images/debug1.png">
+<meta property="og:image" content="http://elizachen.cc/images/debug2.png">
+<meta property="og:image" content="http://elizachen.cc/images/weixin_qrcode.jpg">
+<meta property="og:updated_time" content="2016-11-13T04:08:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="元学习课心得和实践——八小时搞定《JavaScript DOM》">
+<meta name="twitter:description" content="感谢XDite的元学习课程,她让我8小时搞定了《JavaScript DOM 编程艺术》。">
+<meta name="twitter:image" content="http://elizachen.cc/images/Programmer_woman.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://elizachen.cc/2016/11/12/javascript/Meta_learning_Experience_practice/"/>
+
+
+  <title> 元学习课心得和实践——八小时搞定《JavaScript DOM》 | elizaChen's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en,zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-83603476-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?627808f376c5fcd3295762f9bb4c042d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=58296184";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">elizaChen's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Trust in what you love</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+ <div id="lang-select-wrap" style="display: block; padding: 10px auto; margin: 10px auto; width: 100%; text-align: center">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span> </span></label>
+        <select id="lang-select" onchange="changeLang()">
+            <option value="en">English</option>
+            <option value="zh-Hans">简体中文</option>
+        </select>
+        <script>
+            var gLang ;
+            function setLang(){
+              var href = window.location.href;
+              var host = window.location.host;
+              var start = href.indexOf(host) + host.length + 1;
+              var p = href.substr(start, 2);
+
+              if( p == 'zh'){
+                gLang = 'zh-Hans';
+              }else{
+                gLang = 'en';
+              }
+              //<p id="demo"></p>
+              document.getElementById("lang-select").value = gLang;
+              //document.getElementById("demo").innerHTML = "Now the lang: "+ p + "-->" + gLang;
+            }
+            setLang();
+            function changeLang() {
+                 var lang = document.getElementById("lang-select").value;
+                 var href = window.location.href;
+                 if((gLang != lang) && (lang == "zh-Hans")) {
+                      var host = window.location.host;
+                      var path = window.location.path;
+                      var p = href.replace(host,host+'/'+lang);
+                      window.location.replace(p);
+
+				        }
+                if((gLang != lang) && (lang == "en")) {
+                     var host = window.location.host;
+                     var path = window.location.path;
+                     var p = href.replace('/' + gLang,'');
+                     window.location.replace(p);
+                    //document.getElementById("demo").innerHTML = "Jump to: " + p + " Lang: " + gLang;
+               }
+                //gLang = lang;
+                //document.getElementById("demo").innerHTML = "Jump to: " + href + " Lang: " + gLang;
+			       }
+        </script>
+ </div>
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'KxxSGbzwnoEvZLrbjoZv','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                元学习课心得和实践——八小时搞定《JavaScript DOM》
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-11-12T15:09:00+08:00" content="2016-11-12">
+              2016-11-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/12/javascript/Meta_learning_Experience_practice/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/12/javascript/Meta_learning_Experience_practice/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/12/javascript/Meta_learning_Experience_practice/" class="leancloud_visitors" data-flag-title="元学习课心得和实践——八小时搞定《JavaScript DOM》">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！"><a href="#之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！" class="headerlink" title="之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！"></a>之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！</h4><hr>
+<p><img src="/images/Programmer_woman.jpg" alt="Title"></p>
+<hr>
+<h3 id="XDite-提出很多反常识的学习观点"><a href="#XDite-提出很多反常识的学习观点" class="headerlink" title="XDite 提出很多反常识的学习观点"></a>XDite 提出很多反常识的学习观点</h3><h5 id="第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。"><a href="#第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。" class="headerlink" title="第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。"></a>第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。</h5><p>比如学习编程，应该先快速把东西拼出来，拼一个大东西，然后公开给朋友，接受朋友的赞美，得到正向回馈。</p>
+<p>我是嵌入式驱动程序员，一直想学前端，想学JavaScript，书也买了几本。可是，前几章枯燥的基本概念，就像车轱辘话，磨灭了兴趣。又没有项目的压力，于是厚厚的书本最终在书架上寂寞结蛛网。<br>而又由于一次次<strong>从入门到放弃</strong>的不良记录，打击了自信心，每当新起起“前端好好玩，我也学学吧”的念头，拿出书，大脑中的“怕失败警卫员”就开始拉着我拖延，先洗个澡吧，先泡杯咖啡，空气不错，先去花园里快步走三圈，干劲会更足？不要笑，就这样，前端越来越好玩，可是，和我并没有什么关系！长叹一声！<br>XDite说，<strong>拖延的时候不妨骗骗自己，”我只是玩玩，并不是要如何如何“</strong>，大脑就会放弃警惕，潜意识会忘记痛苦。原来如此！</p>
+<h5 id="第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。"><a href="#第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。" class="headerlink" title="第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。"></a>第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。</h5><p>XDite批判了自学效率低的四个大坑：</p>
+<ul>
+<li>必须有天赋</li>
+<li>必须要看懂每一个步骤，才能往前进</li>
+<li>学习必须要扎实，要从技术原理开始学起</li>
+<li>学习当中禁止用一切捷径，比如说复制粘贴代码，模仿别人的程序。</li>
+</ul>
+<p>额，中枪！！！这不就是我一直以来信奉的真理吗？<br>XDite说这些观点，放在进阶学习没有问题，但是放在初学者身上就是死路一条。<br>原来，是我以往的C/C++学习经验拖了Javascript学习的后腿。</p>
+<p>XDite又提出了一套学习编程的高频小套路：<strong>找出一本实做型的入门指南。一至三天，写完一个小项目</strong>。</p>
+<p>翻开书，直接跳到最后的项目，快速做3遍</p>
+<ul>
+<li><strong>第一遍： 复制项目代码</strong></li>
+<li><strong>第二遍： 跟着打代码，熟悉基本工具，阅读错误信息，学会Debug</strong></li>
+<li><p><strong>第三遍， 分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。</strong></p>
+</li>
+<li><p>还有独门秘籍：<strong>用markdown把自己特别傻逼犯错的地方记下来，把正确的解法也记下来，然后公开发表。同时，自己也背下来。</strong></p>
+</li>
+</ul>
+<p>听完这课，磨拳搽掌，一有时间我就要Try。</p>
+<h5 id="第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者"><a href="#第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者" class="headerlink" title="第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者"></a>第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者</h5><p>XDite提到了德雷福斯模型，新手—高级新手—胜任者—精通者—专家。<br>其实市面上大于50%的都是高级新手。任何人只要有一份高频小套路的SOP，都快速成为高级新手甚至胜人者，可以入行得到一份职位。所以，同学们，希望是大大的有啊！<br>XDite 还提醒我们专家都不是靠坚持得来的，而是上瘾和停不下来。要运用游戏化机制，行动——回馈——不确定的回馈，让自己上瘾。并呼吁大家一定要养成上瘾的习惯。</p>
+<p>这一点，我可以胜任，通宵打游戏，用虚拟人生复刻自己小时候的社区，连夜追韩剧，看小说，我，你都可以的。</p>
+<hr>
+<h3 id="动手实践"><a href="#动手实践" class="headerlink" title="动手实践"></a>动手实践</h3><p>正式课程一结束，我马上爬上凳子，从最高一排拿下《JavaScript DOM 编程艺术》，抹去上面厚厚的灰尘，露出她可爱的样子。<br>翻到最后一章Chapter12《综合示例》，要给世界著名乐队Jay Skript and the Domsers 设计一个网站。不错哦！<br><strong>“我只不过敲着代码玩玩，就一两个文件就好。”</strong> 我对竖起耳朵的大脑“怕失败警卫员”如是说，他说“OK，放行”。</p>
+<h5 id="第一遍：-复制项目代码（2小时）"><a href="#第一遍：-复制项目代码（2小时）" class="headerlink" title="第一遍： 复制项目代码（2小时）"></a>第一遍： 复制项目代码（2小时）</h5><ol>
+<li><p>感谢万能的github，书的示例代码github上有,Clone下整个工程。</p>
+<blockquote>
+<p>$git clone <a href="https://github.com/clamaa/javascript-dom.git" target="_blank" rel="external">https://github.com/clamaa/javascript-dom.git</a></p>
+</blockquote>
+</li>
+<li><p>新建文件夹 /1st , 按照书中内容，规划站点结构，并建立模板html和对应的html文件。</p>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Photos</li>
+<li>Live</li>
+<li>Contact</li>
+</ul>
+</li>
+<li>规划文件夹目录。<ul>
+<li>/images ： 所有的图像文件</li>
+<li>/styles ： 颜色，版式和布局的CSS文件，使用basic.css 导入其它CSS文件，更方便编码和维护。</li>
+<li>/scripts ： Javascript 文件，使用modernizr-1.7.js 检测支援不同的浏览器，使用global.js 包含我们要编写的所有函数。</li>
+</ul>
+</li>
+<li>从Clone下的工程，复制粘贴所以代码，文件。</li>
+<li>使用Chrome 打开index.html，然后逐一验证各个页面。 Bingo！</li>
+</ol>
+<h5 id="第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug-4小时）"><a href="#第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug-4小时）" class="headerlink" title="第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug (4小时）"></a>第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug (4小时）</h5><ol>
+<li>新建文件夹 /2nd, 把 /1st 中的所以文件拷入</li>
+<li>把所有<em>.html, </em>.css, global.js 文件，内容清空</li>
+<li>跟着12章各个js函数，文件出场顺序，敲代码</li>
+<li>在书中每个html页面检测过程，遇到bug， 解bug。</li>
+</ol>
+<p><strong>使用工具： Chrome自带开发工具。</strong></p>
+<p>按F12按键开启：</p>
+<p><img src="/images/debug1.png" alt="Debug1"></p>
+<p><strong>打印错误信息</strong> : 参考<a href="https://developers.google.com/web/tools/chrome-devtools/console/" target="_blank" rel="external">https://developers.google.com/web/tools/chrome-devtools/console/</a></p>
+<ul>
+<li>console.log()</li>
+<li>console.error()</li>
+</ul>
+<p><strong>断点调试</strong></p>
+<p><img src="/images/debug2.png" alt="Debug2"></p>
+<h5 id="第三遍，-分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。-2小时"><a href="#第三遍，-分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。-2小时" class="headerlink" title="第三遍， 分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。(2小时)"></a>第三遍， 分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。(2小时)</h5><p>记录下所犯的错误</p>
+<p><strong> 1. 拼写错误：</strong></p>
+<ul>
+<li>函数名称写错：document.getElementById 误写成 document.getElementsById，<br>var destination = this.getAttribute(“href”) 误写成var destination = this.getAttribut(“href”);</li>
+<li>CSS 中的误写：<ul>
+<li>font-weight: bold 误写成 front-weight:bold;</li>
+<li>@import url(layout.css) 误写成 @import ulr(layout.css)， 所以Layout 不对</li>
+<li>href 误写成 hrdf， global.js 里面对 links.getAttribute(“href”) 当然没有作用。</li>
+</ul>
+</li>
+</ul>
+<p><strong> 2. 遗漏：</strong></p>
+<ul>
+<li>JS function 不起作用： 漏写：&lt; script src=”scripts/global.js” &gt;&lt;/ script &gt;</li>
+</ul>
+<p>……</p>
+<p><strong>这些Bug都可以通过设置断点和打印信息一一解决。</strong></p>
+<p>接下来，翻翻书中的知识点，对比项目中的运用，其义自见，无比轻松。<br>总结重要知识点，留到下一篇.</p>
+<p><strong>真的没有想到，8小时，这本书被我搞定了！棒呆！~~</strong></p>
+<ul>
+<li>我把代码上传了，同学们直接git clone 吧： <a href="https://github.com/elizachen/JaySkript.git" target="_blank" rel="external">https://github.com/elizachen/JaySkript.git</a></li>
+<li>我的github： elizachen；</li>
+<li>可以通过 <a href="http://elizachen.cc/JaySkript/">http://elizachen.cc/JaySkript/</a> 看sample的运行效果哦！</li>
+</ul>
+<p>如果你也有过<strong>“从入门到放弃”</strong>的经历，<strong>听XDite一次，试试她的方法吧！</strong><br>关注微信号 新生大学 了解详情。<br>谢谢阅读！</p>
+<p>提图摄影：geralt 来源：<a href="https://pixabay.com/" target="_blank" rel="external">https://pixabay.com/</a><br>图片授权基于： CCO协议<br>欢迎访问我的<a href="http://elizachen.cc">My Blog</a> !<br>如果喜欢我的文章，长按识别二维码，关注我的公众号。<br><img src="/images/weixin_qrcode.jpg" alt="qrcode"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创&分享。谢谢您鼓励！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat-reward-image.JPG" alt="elizachen WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay-reward-image.JPG" alt="elizachen Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Meta-Learning/" rel="tag">#Meta Learning</a>
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/29/diary/self-introduction/" rel="next" title="告诉你，我是谁">
+                <i class="fa fa-chevron-left"></i> 告诉你，我是谁
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/12/javascript/Meta_learning_Experience_practice/"
+           data-title="元学习课心得和实践——八小时搞定《JavaScript DOM》" data-url="http://elizachen.cc/2016/11/12/javascript/Meta_learning_Experience_practice/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="elizachen" />
+          <p class="site-author-name" itemprop="name">elizachen</p>
+          <p class="site-description motion-element" itemprop="description">Practice Progress Persist Share</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://xiaolai.li/" title="XiaoLaiLi" target="_blank">XiaoLaiLi</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！"><span class="nav-number">1.</span> <span class="nav-text">之前在新生大学参加了XDite的元学习课程，感谢XDite，她跌破了我的眼镜，刷新了我的认知！</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XDite-提出很多反常识的学习观点"><span class="nav-number"></span> <span class="nav-text">XDite 提出很多反常识的学习观点</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。"><span class="nav-number">0.1.</span> <span class="nav-text">第一堂，学习是拼图，不是登山；学习要有成就感，要让自己停不下来。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。"><span class="nav-number">0.2.</span> <span class="nav-text">第二堂，提出左右脑配合的肌肉快速入门法。通过先用右脑感知，模仿，熟悉基本框架，再放左脑出来理性分析。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者"><span class="nav-number">0.3.</span> <span class="nav-text">第三堂，人人可以通过高频小套路，快速成为高级新手或胜任者</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动手实践"><span class="nav-number"></span> <span class="nav-text">动手实践</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一遍：-复制项目代码（2小时）"><span class="nav-number">0.1.</span> <span class="nav-text">第一遍： 复制项目代码（2小时）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug-4小时）"><span class="nav-number">0.2.</span> <span class="nav-text">第二遍，跟着打代码，熟悉基本工具，阅读错误信息，学会Debug (4小时）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三遍，-分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。-2小时"><span class="nav-number">0.3.</span> <span class="nav-text">第三遍， 分析打错的，为什么会错。体会输入什么，就会得到什么。把懂的，不懂的，都背下来。(2小时)</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eliza chen</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("K1bQP4O6xC1dsnnY6A0XdgB4-gzGzoHsz", "YDPRbWDGm8Khp8hvdj6LuBWT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
